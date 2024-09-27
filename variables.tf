@@ -7,7 +7,7 @@ variable "region" {
 variable "s3_bucket_name" {
   description = "Bucket Name"
   type        = string
-  default     = "backend_bucket"
+  default     = "tf-bucket"
 }
 
 variable "environment" {
