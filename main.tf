@@ -3,7 +3,7 @@ resource "random_id" "bucket_id" {
 }
 
 resource "aws_s3_bucket" "terraform_state_bucket" {
-  bucket = "tf-backend-${var.environment}-${random_id.bucket_id.hex}"
+  bucket = "${var.s3_bucket_name}-${var.environment}-${random_id.bucket_id.hex}"
 
   lifecycle {
     prevent_destroy = false
